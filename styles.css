@@ -1,0 +1,526 @@
+/* ROOT */
+:root{
+  --color-primary: #6c63ff;
+  --color-white: #fff;
+  --color-bg: #f3f4f5;
+
+  --transition: all 300ms ease;
+}
+
+
+/* GLOBAL CSS */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, 'san-serif';
+  line-height: 1.7;
+  color: #000;
+  /* background: #1f264123; */
+}
+
+
+h1,h2,h3,h4,h5{
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2.1rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  display: inline-block;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+
+/*========= NAVBAR ==========*/
+
+nav {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  transition: var(--transition);
+  /* background-color: red; */
+}
+
+.window-scroll {
+  background: var(--color-primary);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  color: var(--color-white);
+}
+
+.window-scroll .logo {
+  color: white;
+}
+.window-scroll .logo span {
+  color: white;
+}
+.window-scroll .nav__menu li a {
+  color: white;
+}
+.window-scroll button {
+  color: white;
+}
+
+.nav__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  display: none;
+}
+
+.nav__container h4 {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.nav__container h4 span {
+  color: rgba(109, 179, 241, 0.421);
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav__menu a {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  transition: all 0.3s linear;
+}
+
+.nav__menu a:hover {
+  color: rgba(109, 179, 241, 0.671);
+}
+
+/*=========== HEADER ==============*/
+header {
+  position: relative;
+  top: 8rem;
+  height: 65vh;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.header__left p {
+  margin: 0.8rem 0 2.4rem;
+}
+
+
+/*============= TRENDING ===========*/
+.trending {
+  background: var(--color-bg);
+  position: relative;
+}
+
+.trending h2 {
+  text-align: left;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.trending__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  place-items: center;
+}
+
+.trends {
+  width: 90%;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.trends:hover {
+  transform: scale(1.05);
+}
+
+.trend__image img{
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.trend__info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
+  color: #000;
+}
+
+.trend__info p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+/*==== TRENDING MODALS ====*/
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+
+/* Open/Close Modal */
+.open-modal{
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal__container{
+  background: white;
+  border-radius: 0.5rem;
+  width: 90vw;
+  height: 55vh;
+  max-width: 700px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+/*=== MODAL CONTENT ===*/
+.modal__content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.modal__left img{
+  width: 90%;
+}
+
+.modal__right {
+  text-align: left;
+  /* margin-top: 1rem; */
+}
+
+.modal__right .btn {
+  margin: 0.3rem 0 1rem;
+}
+.modal__right .btn:hover {
+  transform: none;
+}
+
+.modal__right .hero-btn {
+  padding: 1rem 5rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  font-size: 1rem;
+  font-family: Montserrat, 'san-serif';
+}
+
+.modal__right .red-btn {
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.modal__right p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.669);
+  padding: 0 1rem;
+}
+
+.modal__right .author {
+  margin: 0.3rem 0;
+  padding: 0;
+  color: #000;
+}
+
+.modal__right p span {
+  margin-right: 0.2rem;
+  color: rgba(0, 0, 0, 0.669);
+}
+
+.modal__right .more {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  position: absolute;
+  right: 1.7rem;
+  cursor: pointer;
+}
+
+.modal__right .more span {
+  font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*========== MEDIA QUERIES (TABLETS) ===========*/
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2{
+    font-size: 1.7rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  /*==== NAVBAR =====*/
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  nav button:hover {
+    transform: scale(1.1);
+  }
+
+  nav button#close-menu-btn {
+    display: none;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 5rem;
+    right: 5%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    z-index: 3;
+  }
+  .nav__menu li {
+    width: 100%;
+    height: 5.8rem;
+    transition: all 300ms linear;
+  }
+  .nav__menu li a {
+    background: var(--color-primary);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-bottom: 0.5px solid var(--color-white);
+  }
+  .nav__menu li:last-child a {
+    border-bottom: none;
+  }
+  .nav__menu li a:hover {
+    background: #6b63ffd3;
+    color: var(--color-white);
+  }
+
+  /* HEADER */
+  header {
+    top: 15vh;
+    height: 50vh;
+    margin-bottom: 4rem;
+  }
+  .header__container {
+    gap: 0;
+    padding-bottom: 3rem;
+  }
+
+  /* TRENDING */
+  .modal__container {
+    height: 40vh;
+  }
+  .modal__left img {
+    width: 95%;
+  }
+}
+
+
+
+/*========== MEDIA QUERIES (PHONES) ===========*/
+@media screen and (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+  .nav__menu {
+    right: 3%;
+  }
+
+  /* HEADER */
+  header {
+    height: 100vh;
+  }
+  .header__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .header__left p {
+    margin-bottom: 1.3rem;
+  }
+  .header__right {
+    margin-top: 5rem;
+  }
+
+  /* TRENDING */
+  .trending {
+    padding: 5rem 0;
+  }
+  .container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .trending__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .trends {
+    width: 100%;
+  }
+  .trend__info h4{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .trend__info p {
+    font-size: 0.8rem;
+  }
+  
+  /* MODAL OVERLAY */
+  .modal__container {
+    height: 60vh;
+    overflow: hidden;
+    overflow: scroll;
+  }
+  .modal__content {
+    grid-template-columns: 1fr;
+  }
+  .modal__left {
+    width: 45%;
+    margin: 1rem auto;
+  }
+  .modal__right {
+    text-align: center;
+  }
+  .modal__right .btn {
+    margin: 0 0 0.5rem;
+  }
+  .modal__right .hero-btn {
+    padding: 0.5rem 2.5rem;
+    font-size: 0.8rem;
+  }
+  .modal__right .red-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.25rem;
+  }
+  .modal__right h3 {
+    font-size: 1.1rem;
+  }
+  .modal__right p {
+    font-size: 0.8rem;
+  }
+  .modal__right .author {
+    margin: 0.2rem 0;
+  }
+  .modal__right .more {
+    margin: 0.5rem 0;
+  }
+  
+}
