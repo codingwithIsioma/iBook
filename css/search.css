@@ -1,0 +1,116 @@
+/* SEARCH INPUT FORM */
+.search-form {
+    position: relative;
+    top: 8rem;
+    margin: 0 auto;
+}
+
+.search-form .search-btn {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+/* SEARCH RESPONSE FIELD */
+.search_field {
+    position: relative;
+    top: 12rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+}
+
+.search_content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    place-items: center;
+    margin-bottom: 1rem;
+}
+
+.search_details {
+    display: grid;
+    grid-template-columns: 30% auto;
+    gap: 2rem;
+}
+
+.search_left img {
+    border: 1px solid #6c63ff;
+    padding: 2px;
+    border-radius: 5px;
+    width: fit-content;
+    object-fit: cover;
+}
+
+.search_right .search_title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.add_btn {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+    margin-top: 1rem;
+    padding: 5px 8px;
+}
+
+.search_right p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.search_right p strong {
+    font-weight: 400;
+}
+
+.search_content .search_divisor {
+    background-color: #6b63ff30;
+    width: 90%;
+    height: 1px;
+    margin-top: 1rem;
+}
+
+.error-message {
+    margin: 0 auto;
+    text-align: center;
+    color: #000000b7;
+    font-size: 0.8rem;
+    margin-top: 14rem;
+}
+
+@media screen and (max-width: 1023px) {
+    .search_content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .search_right .search_title {
+        font-size: 1.3rem;
+        margin-bottom: 0.4rem;
+    }
+    .search_right p {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+    .search_details {
+        place-items: center;
+        gap: 1rem;
+    }
+    .add_btn {
+        display: block;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search_field {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .search_details {
+        grid-template-columns: 35% auto;
+    }
+    .search_right .search_title {
+        margin-bottom: 0.6rem;
+    }
+    .add_btn {
+        margin-top: 1rem;
+    }
+}

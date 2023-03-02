@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBook Store | Search</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/shelf.css">
+    <!-- TAILWIND -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+<body>
+    <nav>
+        <div class="s-container nav__container">
+          <a href="index.html"><h4 class="font-montserrat font-bold logo"><span>i</span>BOOK</h4></a>
+          <ul class="nav__menu">
+            <li><a href="">MyShelf</a></li>
+            <li><a href="./search.html"><i class="fas fa-search"></i></a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+          <button id="open-menu-btn"><i class="fas fa-book-open"></i></button>
+          <button id="close-menu-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </nav>
+
+    <section>
+        <div class="s-container shelf-container">
+            <div class="shelf-top">
+               <h2 class="shelf-title">Shelf</h2>
+                <h4 class="current-read">Current Reads
+                <div class="under"></div> 
+                </h4>
+                <hr class="shelf_divisor"> 
+            </div>
+            <div id='shelf' class="shelf-bottom">
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./javascript/app.js"></script>
+    <script src="./javascript/shelf.js"></script>
+</body>
+</html>

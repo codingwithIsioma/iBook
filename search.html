@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iBook Store | Search</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/removediv.css">
+    <!-- TAILWIND -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/fonts.css">
+</head>
+<body>
+    <nav>
+        <div class="s-container nav__container">
+          <a href="index.html"><h4 class="font-montserrat font-bold logo"><span>i</span>BOOK</h4></a>
+          <ul class="nav__menu">
+            <li><a href="./shelf.html">MyShelf</a></li>
+            <li><a href=""><i class="fas fa-search"></i></a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+          <button id="open-menu-btn"><i class="fas fa-book-open"></i></button>
+          <button id="close-menu-btn"><i class="fas fa-times"></i></button>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- SEARCH FIELD -->
+    <div class="s-container">
+        <form class="w-full max-w-sm search-form">
+            <div class="flex items-center border-b border-purple-500 py-2">
+                <input id="searchInput" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Search by authors, titles..." autocomplete="off">
+                <button id="searchBtn" class="flex-shrink-0 bg-purple-500 hover:bg-purple-700 hover:border-purple-700 text-sm border-4 text-white py-1 px-2 rounded search-btn" type="button">Search</button>
+            </div>
+        </form>
+
+        <div id="searchField" class="search_field">
+            <!-- <div class="search_content">
+                <div class="search_details">
+                    <div class="search_left">
+                        <img src="./images/book-4.jpg">
+                    </div>
+                    <div class="search_right">
+                        <a class="search_title" href="" target="_blank">Act like a Lady: Think like a Man</a>
+                        <p class="author"><strong>Author:</strong> Lisa Lutz</p>
+                        <p><strong>Genre:</strong> Fiction</p>
+                        <p><strong>Publisher:</strong> WEBNOVEL</p>
+                        <p><strong>Language:</strong> en</p>
+                        <div class="search_addtolist">
+                            <button class="hover:bg-purple-700 hover:border-purple-700 text-sm border-4 text-white py-1 px-2 rounded add_btn">Add To Shelf</button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="search_divisor">
+            </div> -->
+        </div>
+
+        <div id="search-container">
+        </div>
+    </div>
+
+    <div id="shelf"></div>
+
+    <script src="./javascript/app.js"></script>
+    <script src="./javascript/shelf.js"></script>
+    <script src="./javascript/search-field.js"></script>
+</body>
+</html>

@@ -7,7 +7,11 @@
   <title>iBook Store</title>
 
   <!-- STYLESHEET -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/shelf.css">
+  <link rel="stylesheet" href="./css/removediv.css">
+  <!-- TAILWIND -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,31 +20,35 @@
       rel="stylesheet" />
   <!-- ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/fonts.css">
+
+
 </head>
 <body>
   <nav>
-    <div class="container nav__container">
-      <a href="index.html"><h4 class="logo"><span>i</span>BOOK</h4></a>
+    <div class="s-container nav__container">
+      <a href="index.html"><h4 class="font-montserrat font-bold logo"><span>i</span>BOOK</h4></a>
       <ul class="nav__menu">
-        <li><a href="">MyShelf</a></li>
+        <li><a href="./shelf.html">MyShelf</a></li>
+        <li><a href="./search.html"><i class="fas fa-search"></i></a></li>
         <li><a href="">Store</a></li>
         <li><a href="">Login</a></li>
         <!-- <li><a href="">Contact</a></li> -->
       </ul>
-      <button id="open-menu-btn"><i class="fas fa-keyboard"></i></button>
+      <button id="open-menu-btn"><i class="fas fa-book-open"></i></button>
       <button id="close-menu-btn"><i class="fas fa-times"></i></button>
     </div>
   </nav>
   <!-- END OF NAVBAR -->
 
   <header>
-    <div class="container header__container">
+    <div class="s-container header__container">
       <div class="header__left">
-        <h1>Want Your Own Personalized Library?</h1>
-        <p>
+        <h1 class="font-bold main-header">Want Your Own Personalized Library?</h1>
+        <p class="font-normal leading-normal">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum soluta dicta natus nulla doloremque illo dignissimos.
         </p>
-        <a href="#" class="btn">Get Started</a>
+        <a href="#" class="text-sm btn">Get Started</a>
       </div>
       <div class="header__right">
         <div class="header__img">
@@ -52,31 +60,20 @@
   <!-- END OF HEADER -->
 
   <section class="trending">
-    <div class="container">
-      <h2>Trending Now</h2>
-      <div class="trending__container">
+    <div class="s-container">
+      <h2 class="font-bold">Trending Now</h2>
+      <div class="flex overflow-x-scroll" id="trending__container">
         
-        <article class="trends" data-target="#modal1">
+       <!-- <article class="flex-shrink-0 mr-4 trends" data-target="#modal1">
           <div class="trend__image">
             <img src="./images/book-4.jpg">
           </div>
           <div class="trend__info">
-            <h4>Swallows</h4>
+            <h4>The Swallows</h4>
             <p>Lisa Lutz</p>
           </div>
-        </article>
-
-        <article class="trends" data-target="#modal2">
-          <div class="trend__image">
-            <img src="./images/book-2.jpg">
-          </div>
-          <div class="trend__info">
-            <h4>Invisible Man</h4>
-            <p>Ralph Ellison</p>
-          </div>
-        </article>
-
-        <article class="trends" data-target="#modal3">
+        </article> 
+       <article class="flex-shrink-0 mr-4 trends" data-target="#modal1">
           <div class="trend__image">
             <img src="./images/book-3.jpg">
           </div>
@@ -84,9 +81,17 @@
             <h4>Sin Eater</h4>
             <p>Megan Campisi</p>
           </div>
-        </article>
-
-        <article class="trends" data-target="#modal4">
+        </article> 
+       <article class="flex-shrink-0 mr-4 trends" data-target="#modal1">
+          <div class="trend__image">
+            <img src="./images/book-2.jpg">
+          </div>
+          <div class="trend__info">
+            <h4>The Invincible Man</h4>
+            <p>Ralph Ellison</p>
+          </div>
+        </article> 
+       <article class="flex-shrink-0 mr-4 trends" data-target="#modal1">
           <div class="trend__image">
             <img src="./images/book-1.jpg">
           </div>
@@ -94,116 +99,96 @@
             <h4>The Great Gatsby</h4>
             <p>Scott Fitzgerald</p>
           </div>
-        </article>
+        </article> 
+       <article class="flex-shrink-0 mr-4 trends" data-target="#modal1">
+          <div class="trend__image">
+            <img src="./images/book-5.jpg">
+          </div>
+          <div class="trend__info">
+            <h4>The Book Thief</h4>
+            <p>Markus Zusak</p>
+          </div> -->
+        </article> 
+
       </div>
     </div>
 
-    <div class="modal-overlay" id="modal1">
-      <div class="modal__container">
-        <button class="close-btn" data-target="#modal1">
-          <i class="fas fa-times"></i>
-        </button>
+    <div id="modal">
+      <!-- <div class="modal-overlay" id="modal1">
+        <div class="modal__container">
+          <button class="close-btn" data-target="#modal1">
+            <i class="fas fa-times"></i>
+          </button>
 
-        <div class="modal__content">
-          <div class="modal__left">
-            <img src="./images/book-4.jpg">
-          </div>
-          <div class="modal__right">
-            <h3>The Swallows</h3>
-            <p class="author"><span><i class="fas fa-book"></i></span> Lisa Lutz</p>
-            <button class="btn hero-btn">Start Reading</button>
-            <button class="btn red-btn"><i class="fas fa-plus"></i></button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error neque quo cupiditate amet cumque iste similique, numquam ducimus! Laudantium nulla pariatur aliquid cupiditate libero neque vel hic mollitia ducimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, sunt.
-            </p>
+          <div class="modal__content">
+            <div class="modal__left">
+              <img src="./images/book-4.jpg">
+            </div>
+            <div class="modal__right">
+              <h3 class="modal_title">Act like a Lady: Think like a Man</h3>
+              <p class="author"><span><i class="fas fa-book"></i></span> Lisa Lutz</p>
+              <button class="btn hero-btn">Start Reading</button>
+              <button class="btn red-btn"><i class="fas fa-plus"></i></button>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. lore Perferendis error neque quo cupiditate amet cumque iste similique, numquam ducimus! Laudantium nulla pariatur aliquid cupiditate libero neque vel hic mollitia ducimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, sunt.
+              </p>
 
-            <h5 class="more">More Details <span><i class="fas fa-angle-right"></i></span></h5>
+              <h5 class="more">More Details <span><i class="fas fa-angle-right"></i></span></h5>
+            </div>
+            
           </div>
-          
-        </div>
-      </div>  
+        </div>  
+      </div> -->
     </div>
-
-    <div class="modal-overlay" id="modal2">
-      <div class="modal__container">
-        <button class="close-btn" data-target="#modal2">
-          <i class="fas fa-times"></i>
-        </button>
-
-        <div class="modal__content">
-          <div class="modal__left">
-            <img src="./images/book-2.jpg">
-          </div>
-          <div class="modal__right">
-            <h3>Invisible Man</h3>
-            <p class="author"><span><i class="fas fa-book"></i></span> Ralph Ellison</p>
-            <button class="btn hero-btn">Start Reading</button>
-            <button class="btn red-btn"><i class="fas fa-plus"></i></button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error neque quo cupiditate amet cumque iste similique, numquam ducimus! Laudantium nulla pariatur aliquid cupiditate libero neque vel hic mollitia ducimus? 
-            </p>
-
-            <h5 class="more">More Details <span><i class="fas fa-angle-right"></i></span></h5>
-          </div>
-          
-        </div>
-      </div>  
-    </div>
-
-    <div class="modal-overlay" id="modal3">
-      <div class="modal__container">
-        <button class="close-btn" data-target="#modal3">
-          <i class="fas fa-times"></i>
-        </button>
-
-        <div class="modal__content">
-          <div class="modal__left">
-            <img src="./images/book-3.jpg">
-          </div>
-          <div class="modal__right">
-            <h3>Sin Eater</h3>
-            <p class="author"><span><i class="fas fa-book"></i></span> Megan Campisi</p>
-            <button class="btn hero-btn">Start Reading</button>
-            <button class="btn red-btn"><i class="fas fa-plus"></i></button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error neque quo cupiditate amet cumque iste similique, numquam ducimus! Laudantium nulla pariatur aliquid cupiditate libero neque vel hic mollitia ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </p>
-
-            <h5 class="more">More Details <span><i class="fas fa-angle-right"></i></span></h5>
-          </div>
-          
-        </div>
-      </div>  
-    </div>
-
-    <div class="modal-overlay" id="modal4">
-      <div class="modal__container">
-        <button class="close-btn" data-target="#modal4">
-          <i class="fas fa-times"></i>
-        </button>
-
-        <div class="modal__content">
-          <div class="modal__left">
-            <img src="./images/book-1.jpg">
-          </div>
-          <div class="modal__right">
-            <h3>The Great Gatsby</h3>
-            <p class="author"><span><i class="fas fa-book"></i></span> Scott Fitzgerald</p>
-            <button class="btn hero-btn">Start Reading</button>
-            <button class="btn red-btn"><i class="fas fa-plus"></i></button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error neque quo cupiditate amet cumque iste similique, numquam ducimus! Laudantium nulla pariatur aliquid cupiditate libero neque vel hic mollitia ducimus? Lorem ipsum dolor sit amet.
-            </p>
-
-            <h5 class="more">More Details <span><i class="fas fa-angle-right"></i></span></h5>
-          </div>
-          
-        </div>
-      </div>  
-    </div>
-
   </section>
+
+  <div id="shelf"></div>
+
+  <section class="promotions">
+    <div class="s-container">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="relative"
+        data-te-carousel-init
+        data-te-carousel-slide>
+        <div
+          class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+          <div
+            class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item
+            data-te-carousel-active>
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+              class="block w-full"
+              alt="Wild Landscape" />
+          </div>
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item>
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+              class="block w-full"
+              alt="Camera" />
+          </div>
+          <div
+            class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item>
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+              class="block w-full"
+              alt="Exotic Fruits" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p>Horror Special's</p>
+
   
-  <script src="app.js"></script>
+  <script src="./javascript/app.js"></script>
+  <script src="./javascript/shelf.js"></script>
+  <script src="./javascript/fetching-trends.js"></script>
+
 </body>
 </html>
