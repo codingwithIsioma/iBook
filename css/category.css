@@ -1,0 +1,131 @@
+.browse-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+.browse-content-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 1rem;
+    margin: 50px auto;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.218);
+    padding: 20px;
+}
+
+.browse__content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 0.5rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.browse_title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.push-start {
+    display: flex;
+}
+
+.author {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.669);
+    margin: auto 5px;
+}
+
+.author span {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.669);
+}
+
+.rate {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.669);
+    margin: auto 5px;
+}
+
+.rate .fas {
+    font-size: 0.8rem;
+    color: gold;
+}
+
+.green-btn {
+    font-size: 0.7rem;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    background: transparent;
+    border: 1px solid #6c63ff;
+    color: #6c63ff;
+}
+
+.browse-desc {
+    font-size: 0.8rem;
+    color:rgba(0, 0, 0, 0.669)
+}
+
+@media screen and (max-width: 1023px) {
+    .browse-content-container {
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .browse-header {
+        font-size: 1.2rem;
+        margin: 10px auto;
+    }
+    .browse-content-container {
+        width: 95%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+    .browse__content {
+        grid-template-columns: 40% 60%;
+        gap: 0.5rem;
+    }
+    .browse_title {
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+    }
+    .rating {
+        margin-bottom: 0.2rem;
+    }
+    .author {
+        font-size: 0.6rem;
+        margin: auto 2px;
+    }
+    
+    .author span {
+        font-size: 0.6rem;
+    }
+    
+    .rate {
+        font-size: 0.6rem;
+        margin: auto 2px;
+    }
+    
+    .rate .fas {
+        font-size: 0.6rem;
+    }
+    .green-btn {
+        font-size: 0.5rem;
+        padding: 4px 10px;
+        margin-right: 10px;
+    }
+    .browse-desc {
+        font-size: 0.6rem;
+    }
+}

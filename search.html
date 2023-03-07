@@ -8,7 +8,6 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/search.css">
-    <link rel="stylesheet" href="./css/removediv.css">
     <!-- TAILWIND -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <!-- FONTS -->
@@ -47,34 +46,79 @@
         </form>
 
         <div id="searchField" class="search_field">
-            <!-- <div class="search_content">
-                <div class="search_details">
-                    <div class="search_left">
-                        <img src="./images/book-4.jpg">
-                    </div>
-                    <div class="search_right">
-                        <a class="search_title" href="" target="_blank">Act like a Lady: Think like a Man</a>
-                        <p class="author"><strong>Author:</strong> Lisa Lutz</p>
-                        <p><strong>Genre:</strong> Fiction</p>
-                        <p><strong>Publisher:</strong> WEBNOVEL</p>
-                        <p><strong>Language:</strong> en</p>
-                        <div class="search_addtolist">
-                            <button class="hover:bg-purple-700 hover:border-purple-700 text-sm border-4 text-white py-1 px-2 rounded add_btn">Add To Shelf</button>
-                        </div>
-                    </div>
+            <h3 class="browse-header">Browse Categories</h3>
+            <div></div>
+            <div class="browse-container">
+                <div class="browse-item">
+                    <p href="./category.html" class="browse-title">Paid Stories</p>
+                    <img src="https://static.wattpad.com/image/edschoice-illo@3x.png" alt="" class="browse-image">
                 </div>
-                <hr class="search_divisor">
-            </div> -->
+                <div class="browse-item">
+                    <p href="./category.html" class="browse-title">Comic</p>
+                    <img src="https://static.wattpad.com/image/fantasy-illo@3x.png" alt="" class="browse-image">
+                </div>
+            </div>
+            <div class="browse-container">
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Crime</a>
+                    <img src="https://static.wattpad.com/image/paranormal-illo@3x.png" alt="" class="browse-image">
+                </div>
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Drama</a>
+                    <img src="https://static.wattpad.com/image/newadult-illo@3x.png" alt="" class="browse-image">
+                </div>
+            </div>
+            <div class="browse-container">
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Fiction</a>
+                    <img src="https://static.wattpad.com/image/adventure-illo@3x.png" alt="" class="browse-image">
+                </div>
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">History</a>
+                    <img src="https://static.wattpad.com/image/historicalfic-illo@3x.png" alt="" class="browse-image">
+                </div>
+            </div>
+            <div class="browse-container">
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Horror</a>
+                    <img src="https://static.wattpad.com/image/horror-illo@3x.png" alt="" class="browse-image">
+                </div>
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Humor</a>
+                    <img src="https://static.wattpad.com/image/humor-illo@3x.png" alt="" class="browse-image">
+                </div>
+            </div>
+            <div class="browse-container">
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">NonFiction</a>
+                    <img src="https://static.wattpad.com/image/nonfiction-illo@3x.png" alt="" class="browse-image">
+                </div>
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Poetry</a>
+                    <img src="https://static.wattpad.com/image/poetry-illo@3x.png" alt="" class="browse-image">
+                </div>
+            </div>
+            <div class="browse-container">
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Romance</a>
+                    <img src="https://static.wattpad.com/image/romance-illo@3x.png" alt="" class="browse-image">
+                </div>
+                <div class="browse-item">
+                    <a href="./category.html" class="browse-title">Self-Help</a>
+                    <img src="https://static.wattpad.com/image/teenfic-illo@3x.png" alt="" class="browse-image">
+                </div>
+            </div>
         </div>
 
         <div id="search-container">
         </div>
     </div>
 
-    <div id="shelf"></div>
+    <div class="browse-content-container"></div>
 
     <script src="./javascript/app.js"></script>
     <script src="./javascript/shelf.js"></script>
     <script src="./javascript/search-field.js"></script>
+    <script src="./javascript/categories.js"></script>
 </body>
 </html>

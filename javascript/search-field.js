@@ -10,7 +10,7 @@ const searchField = document.querySelector("#searchField");
 const searchFetch = ()=> {
 
     // encodes the input value being received by user
-    url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchInput.value)}`
+    url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchInput.value)}&maxResults=40`
     // console.log(url)
     fetch(url)
     .then((data)=> {
@@ -71,7 +71,7 @@ class fetchingFunc {
                         </div>
                         <div class="search_right">
                             <a class="search_title" href="${bookLink}" target="_blank">${bookTitle}</a>
-                            <p class="author"><strong>Author:</strong> ${bookAuthors}</p>
+                            <p class="author"><strong>Author(s):</strong> ${bookAuthors}</p>
                             <p><strong>Genre:</strong> ${bookGenre}</p>
                             <p><strong>Published:</strong> ${publishDate}</p>
                             <p><strong>Language:</strong> ${language}</p>

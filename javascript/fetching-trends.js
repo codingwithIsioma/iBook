@@ -5,7 +5,7 @@
 const trendField = document.getElementById("trending__container")
 const modalField = document.getElementById("modal")
 
-let trendUrl = "https://www.googleapis.com/books/v1/volumes?key=AIzaSyBOJn2pK_sIwGXDWno2Hoz9pSk-zJkSM4A&q=subject:fiction&orderBy=newest&maxResults=10&langRestrict=en"
+let trendUrl = "https://www.googleapis.com/books/v1/volumes?key=AIzaSyBOJn2pK_sIwGXDWno2Hoz9pSk-zJkSM4A&q=subject:fiction&orderBy=newest&maxResults=12&langRestrict=en&country=uk"
 const getTrendingBooks = ()=> {
     fetch(trendUrl)
     .then((response) => {

@@ -18,9 +18,19 @@ menuBtn.addEventListener("click", function(){
   menuBtn.style.display = "none"
 })
 
-// close 
+// close
 closeBtn.addEventListener("click", function(){
   menu.style.display = "none"
   closeBtn.style.display = "none"
   menuBtn.style.display = "inline-block"
 })
+
+// ======== PROMOTIONS ======== //
+
+
+
+
+
+
+
+// https://www.googleapis.com/books/v1/volumes?key=AIzaSyBOJn2pK_sIwGXDWno2Hoz9pSk-zJkSM4A&q=subject:horror&maxResults=40&country=us
