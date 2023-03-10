@@ -378,7 +378,11 @@ header .main-header {
   font-size: 1.3rem;
 }
 
-/* PROMOTIONS */
+/* ALERT */
+.alert-container {
+  width: fit-content;
+  margin: 0 auto;
+}
 
 
 /*========== MEDIA QUERIES (TABLETS) ===========*/
@@ -595,6 +599,10 @@ header .main-header {
   }  
   .modal__right .more {
     margin: 0.5rem 0;
+  }
+  .alert-container {
+    width: fit-content;
+    margin: auto;
   }
   
 }

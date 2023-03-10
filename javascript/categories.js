@@ -5,9 +5,13 @@ class Category {
         if (el.classList.contains('browse-title')) {
             genreQuery = el.textContent.toLowerCase();
             console.log(encodeURIComponent(genreQuery))
+            // window.location.href = `category.html?name=${encodeURIComponent(genreQuery)}`;
         }
 
-        const genreUrl = `https://www.googleapis.com/books/v1/volumes?key=AIzaSyBOJn2pK_sIwGXDWno2Hoz9pSk-zJkSM4A&q=subject:${encodeURIComponent(genreQuery)}&maxResults=40&country=us`
+        const param = new URLSearchParams(window.location.search)
+        const genreName = param.get('name')
+
+        const genreUrl = `https://www.googleapis.com/books/v1/volumes?key=AIzaSyBOJn2pK_sIwGXDWno2Hoz9pSk-zJkSM4A&q=subject:${encodeURIComponent(genreName)}&maxResults=40&country=us`
         console.log(genreUrl)
         fetch(genreUrl)
         .then((response)=> {

@@ -25,12 +25,15 @@ closeBtn.addEventListener("click", function(){
   menuBtn.style.display = "inline-block"
 })
 
-// ======== PROMOTIONS ======== //
+
+// const alertBTN = document.querySelector('#alert-button');
+// const alertNotif = document.querySelector('#alert-notification');
 
 
+// alertBTN.addEventListener('click', ()=> {
+//         alertNotif.classList.remove('translate-y-full')
+//         alertNotif.classList.add('mb-8');
+//         alertNotif.classList.add('translate-y-0');
+// })
 
 
-
-
-
-// https://www.googleapis.com/books/v1/volumes?key=AIzaSyBOJn2pK_sIwGXDWno2Hoz9pSk-zJkSM4A&q=subject:horror&maxResults=40&country=us

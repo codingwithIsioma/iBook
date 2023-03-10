@@ -160,7 +160,7 @@ searchBtn.addEventListener('click', displayNewSearch)
 
 
 
- // Test to return both author and title 
+// Test to return both author and title 
         // const bothAuthorAndTitle = booksByTitle && (booksByAuthor || booksByTitle)
         // if (bothAuthorAndTitle.length > 0) {
         //     console.log(bothAuthorAndTitle)

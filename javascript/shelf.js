@@ -145,4 +145,3 @@ document.getElementById('shelf').addEventListener('click', (e)=> {
     // remove book from local storage
     Storage.removeBooks(e.target)
 })
-

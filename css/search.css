@@ -30,6 +30,7 @@
     display: grid;
     grid-template-columns: 30% auto;
     gap: 2rem;
+    width: 100%;
 }
 
 .search_left img {

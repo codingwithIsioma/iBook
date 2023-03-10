@@ -2,6 +2,12 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin: 20px auto;
+    margin-bottom: 0;
+}
+
+.browse-header-desc {
+    font-size: 0.9rem;
+    color:rgba(0, 0, 0, 0.669);
 }
 
 .browse-content-container {
@@ -19,6 +25,7 @@
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .rating {
@@ -57,7 +64,8 @@
 
 .rate .fas {
     font-size: 0.8rem;
-    color: gold;
+    color: rgba(0, 0, 0, 0.669);
+    margin-right: 5px;
 }
 
 .green-btn {
@@ -86,6 +94,10 @@
     .browse-header {
         font-size: 1.2rem;
         margin: 10px auto;
+        margin-bottom: 0;
+    }
+    .browse-header-desc {
+        font-size: 0.7rem;
     }
     .browse-content-container {
         width: 95%;
@@ -123,7 +135,7 @@
     .green-btn {
         font-size: 0.5rem;
         padding: 4px 10px;
-        margin-right: 10px;
+        margin-right: 5px;
     }
     .browse-desc {
         font-size: 0.6rem;
