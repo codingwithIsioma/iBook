@@ -39,7 +39,7 @@
     <!-- SEARCH FIELD -->
     <div class="s-container">
         <form class="w-full max-w-sm search-form">
-            <div class="flex items-center border-b border-purple-500 py-2">
+            <div class="flex items-center py-2 under">
                 <input id="searchInput" class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Search by authors, titles..." autocomplete="off">
                 <button id="searchBtn" class="flex-shrink-0 bg-purple-500 hover:bg-purple-700 hover:border-purple-700 text-sm border-4 text-white py-1 px-2 rounded search-btn" type="button">Search</button>
             </div>
@@ -49,19 +49,29 @@
             <h3 class="browse-header">Browse Categories</h3>
             <div></div>
             <div class="browse-container">
-                <a href="/category.html?category=cooking" class="browse-item">
-                    <p class="browse-title">Cooking</p>
-                    <img src="https://static.wattpad.com/image/edschoice-illo@3x.png" alt="" class="browse-image">
+                <a href="/category.html?category=business" class="browse-item">
+                    <p class="browse-title">Business</p>
+                    <img src="https://static.wattpad.com/image/urban-illo@3x.png" alt="" class="browse-image">
                 </a>
                 <a href="/category.html?category=graphic novels" class="browse-item">
-                    <p class="browse-title">Comic</p>
+                    <p class="browse-title">Comics</p>
                     <img src="https://static.wattpad.com/image/fantasy-illo@3x.png" alt="" class="browse-image">
                 </a>
             </div>
             <div class="browse-container">
-                 <a href="/category.html?category=crime" class="browse-item">
+                <a href="/category.html?category=cooking" class="browse-item">
+                    <p class="browse-title">Cooking</p>
+                    <img src="https://static.wattpad.com/image/edschoice-illo@3x.png" alt="" class="browse-image">
+                </a>
+                <a href="/category.html?category=crime" class="browse-item">
                     <p class="browse-title">Crime</p>
                     <img src="https://static.wattpad.com/image/paranormal-illo@3x.png" alt="" class="browse-image">
+                </a>
+            </div>
+            <div class="browse-container">
+                 <a href="/category.html?category=design" class="browse-item">
+                    <p class="browse-title">Design</p>
+                    <img src="https://static.wattpad.com/image/diverselit-illo@3x.png" alt="" class="browse-image">
                 </a>
                 <a href="/category.html?category=drama" class="browse-item">
                     <p class="browse-title">Drama</p>
@@ -69,9 +79,19 @@
                 </a>
             </div>
             <div class="browse-container">
+                <a href="/category.html?category=education" class="browse-item">
+                    <p class="browse-title">Education</p>
+                    <img src="https://static.wattpad.com/image/mystery-illo@3x.png" alt="" class="browse-image">
+                </a>
                 <a href="/category.html?category=fiction" class="browse-item">
                     <p class="browse-title">Fiction</p>
                     <img src="https://static.wattpad.com/image/adventure-illo@3x.png" alt="" class="browse-image">
+                </a>
+            </div>
+            <div class="browse-container">
+                <a href="/category.html?category=health" class="browse-item">
+                    <p class="browse-title">Health <br>& Fitness</p>
+                    <img src="https://static.wattpad.com/image/scifi-illo@3x.png" alt="" class="browse-image">
                 </a>
                 <a href="/category.html?category=history" class="browse-item">
                     <p class="browse-title">History</p>
@@ -99,13 +119,29 @@
                 </a>
             </div>
             <div class="browse-container">
+                <a href="/category.html?category=religion" class="browse-item">
+                    <p class="browse-title">Religion</p>
+                    <img src="https://static.wattpad.com/image/lgbt-illo@3x.png" alt="" class="browse-image">
+                </a>
                 <a href="/category.html?category=romance" class="browse-item">
                     <p class="browse-title">Romance</p>
                     <img src="https://static.wattpad.com/image/romance-illo@3x.png" alt="" class="browse-image">
                 </a>
+            </div>
+            <div class="browse-container">
                 <a href="/category.html?category=self-help" class="browse-item">
                     <p class="browse-title">Self-Help</p>
                     <img src="https://static.wattpad.com/image/teenfic-illo@3x.png" alt="" class="browse-image">
+                </a>
+                <a href="/category.html?category=sport" class="browse-item">
+                    <p class="browse-title">Sports</p>
+                    <img src="https://static.wattpad.com/image/fanfic-illo@3x.png" alt="" class="browse-image">
+                </a>
+            </div>
+            <div class="browse-container">
+                <a href="/category.html?category=technology&engineering" class="browse-item">
+                    <p class="browse-title">Technology</p>
+                    <img src="https://static.wattpad.com/image/wattys2-illo@3x.png" alt="" class="browse-image">
                 </a>
             </div>
         </div>
@@ -114,7 +150,18 @@
         </div>
     </div>
 
-    <div class="browse-content-container"></div>
+    <!-- ALERT MESSAGE -->
+    <div id="alert-notification" class="fixed bottom-0 px-4 py-5 bg-green-400 text-white flex justify-between rounded transform translate-y-full transition duration-200 ease-in-out s-container">
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                    d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+                />
+            </svg>
+            <p id="alert-message"></p>
+        </div>
+    </div>
+    <!-- END OF ALERT MESSAGE -->
 
     <script src="./javascript/app.js"></script>
     <script src="./javascript/shelf.js"></script>

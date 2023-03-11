@@ -46,8 +46,22 @@ class UI {
     static deleteBook(el) {
         if(el.classList.contains('delete')) {
             el.parentElement.parentElement.parentElement.parentElement.remove();
-            confirm('Are you sure you want to remove book?')
+            document.querySelector('#alert-message').textContent = 'Book Removed!'
+            UI.showAlerts()
         }
+    }
+
+    static showAlerts() {
+        const alertNotif = document.querySelector('#alert-notification');
+        alertNotif.classList.add('mb-8');
+        alertNotif.classList.remove('translate-y-full')
+        alertNotif.classList.add('translate-y-0');
+
+        setTimeout(()=> {
+            alertNotif.classList.remove('mb-8');
+            alertNotif.classList.add('translate-y-full')
+            alertNotif.classList.remove('translate-y-0')
+        },2000)
     }
 }
 
@@ -132,7 +146,9 @@ const addingBookFunction = (data)=> {
             Storage.addBooks(newBook);
 
             // alert to show book was added
-            alert('Book added!')
+            document.querySelector('#alert-message').textContent = 'Book Added!'
+            UI.showAlerts()
+            
         })
     })
 }

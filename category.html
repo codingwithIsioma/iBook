@@ -40,7 +40,7 @@
 
   <section id="categories">
     <div class="s-container">
-        <h3 class="browse-header">Category Name</h3>
+        <h3 class="browse-header"></h3>
         <p class="browse-header-desc">Get the best of this category...</p>
         <main>
             <div class="browse-content-container">
@@ -67,9 +67,21 @@
                     </div>
                 </div>
               -->
-            </div>
+            </div>  
         </main>
     </div>
+    <!-- ALERT MESSAGE -->
+    <div id="alert-notification" class="fixed bottom-0 px-4 py-5 bg-green-400 text-white flex justify-between rounded transform translate-y-full transition duration-200 ease-in-out mx-auto my-0">
+      <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                  d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+              />
+          </svg>
+          <p id="alert-message"></p>
+      </div>
+    </div>
+    <!-- END OF ALERT MESSAGE -->
   </section>
 
 

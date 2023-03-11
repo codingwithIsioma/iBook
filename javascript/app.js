@@ -31,9 +31,9 @@ closeBtn.addEventListener("click", function(){
 
 
 // alertBTN.addEventListener('click', ()=> {
-//         alertNotif.classList.remove('translate-y-full')
-//         alertNotif.classList.add('mb-8');
-//         alertNotif.classList.add('translate-y-0');
+//     alertNotif.classList.add('mb-8');
+//     alertNotif.classList.remove('translate-y-full')
+//     alertNotif.classList.add('translate-y-0');
 // })
 
 

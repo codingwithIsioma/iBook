@@ -72,7 +72,7 @@ class trendDisplay {
             modalDisplay += `
                     <div class="modal-overlay" id="modal${bookID}">
                         <div class="modal__container">
-                            <button class="close-btn" data-target="#modal${bookID}">
+                            <button id="alert-button" class="close-btn" data-target="#modal${bookID}">
                                 <i class="fas fa-times"></i>
                             </button>
                     
