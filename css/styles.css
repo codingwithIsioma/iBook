@@ -1,12 +1,49 @@
 /* ROOT */
 :root{
-  --color-primary: #ff6363;
-  --color-primary2: #ff636376;
+  /* --color-primary: #ff6363;
+  --color-primary2: #ff636376; */
   --color-white: #fff;
   --color-bg: #f3f4f5;
 
   --box-shadow: rgba(0, 0, 0, 0.218);
   --transition: all 300ms ease;
+}
+
+.theme-1 {
+  --color-primary: rgb(233, 81, 122);
+  --color-primary2: rgba(233, 81, 122, 0.5);
+}
+
+.theme-2 {
+  --color-primary: rgb(103, 83, 155);
+  --color-primary2: rgba(103, 83, 155, 0.5);
+}
+
+
+/* Style the theme switcher */
+.theme-switcher {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.theme-switcher button {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 2px 2px;
+}
+
+.theme-switcher button.theme-1 {
+  background-color: rgb(233, 81, 122);
+}
+
+.theme-switcher button.theme-2 {
+  background-color: rgb(103, 83, 155);
 }
 
 
@@ -169,6 +206,7 @@ header .main-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  place-items: center;
   gap: 5rem;
 }
 
@@ -184,13 +222,14 @@ header .main-header {
 }
 
 .user-greeting {
+  display: inline;
   font-size: 1.7rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .s-container .divisor {
-  background-color: #6b63ff7b;
+  background-color: var(--color-primary2);
   width: 100%;
   height: 2px;
 }
@@ -538,7 +577,7 @@ header .main-header {
     margin-bottom: 0;
   }
   .header__left p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 1.3rem;
   }
   .header__right {

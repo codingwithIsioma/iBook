@@ -7,7 +7,7 @@
   <title>iBook Store</title>
 
   <!-- STYLESHEET -->
-  <link rel="stylesheet" href="./css/styles.css">
+  <link id="stylesheet" rel="stylesheet" href="./css/styles.css">
   <!-- TAILWIND -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
   <!-- FONTS -->
@@ -22,7 +22,7 @@
 
 
 </head>
-<body>
+<body class="theme-1">
   <nav>
     <div class="s-container nav__container">
       <a href="index.html"><h4 class="font-montserrat font-bold logo"><span>i</span>BOOK</h4></a>
@@ -49,7 +49,7 @@
       </div>
       <div class="header__right">
         <div class="header__img">
-          <img src="./images/background.jpg">
+          <img src="./images/6461.jpg">
         </div>
       </div>
     </div>
@@ -57,12 +57,16 @@
   <!-- END OF HEADER -->
 
   <!-- USER-GREETING -->
-  <!-- <div class="greeting s-container">
-    <h1 class="user-greeting">Hey Bitch!</h1>
+  <div class="greeting s-container">
+    <!-- <span class="user-greeting">Hey Bitch!</span> -->
+    <div class="theme-switcher">
+      <button id="theme-button" class="theme-1"></button>
+      <button id="theme-button" class="theme-2"></button>
+    </div>
     <hr class="divisor">
-  </div> -->
-  
+  </div>
 
+  <!-- TRENDING -->
   <section class="trending">
     <div class="s-container">
       <h2 class="font-bold">Trending Now</h2>
@@ -122,16 +126,6 @@
     </div>
   </div>
   <!-- END OF ALERT MESSAGE -->
-  
-
-  <section class="promotions">
-    <div class="s-container">
-      
-    </div>
-  </section>
-
-  <p></p>
-
   
   <script src="./javascript/app.js"></script>
   <script src="./javascript/shelf.js"></script>

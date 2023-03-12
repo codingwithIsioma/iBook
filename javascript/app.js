@@ -25,15 +25,36 @@ closeBtn.addEventListener("click", function(){
   menuBtn.style.display = "inline-block"
 })
 
+// Get the theme switcher buttons
+const themeSwitcherButtons = document.querySelectorAll('#theme-button');
 
-// const alertBTN = document.querySelector('#alert-button');
-// const alertNotif = document.querySelector('#alert-notification');
+// Add event listeners to the theme switcher buttons
+themeSwitcherButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Toggle the class on the body element
+    if (document.body.classList.contains('theme-1')) {
+      document.body.classList.remove('theme-1');
+      document.body.classList.add('theme-2');
+    } else if (document.body.classList.contains('theme-2')){
+      document.body.classList.remove('theme-2');
+      document.body.classList.add('theme-1');
+    }
+    console.log('Hey');
+    
+    // Save the user's preference
+    localStorage.setItem('theme', document.body.classList.contains('theme-1') ? 'theme-1' : 'theme-2');
+  });
+});
 
+// Check if the user has a saved preference
+const savedTheme = localStorage.getItem('theme');
 
-// alertBTN.addEventListener('click', ()=> {
-//     alertNotif.classList.add('mb-8');
-//     alertNotif.classList.remove('translate-y-full')
-//     alertNotif.classList.add('translate-y-0');
-// })
+if (savedTheme) {
+  // Apply the saved theme
+  document.body.classList.add(savedTheme);
+} else {
+  // Apply the default theme
+  document.body.classList.add('theme-1');
+}
 
 
