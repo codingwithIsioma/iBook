@@ -76,7 +76,7 @@ class fetchingFunc {
                             <p><strong>Published:</strong> ${publishDate}</p>
                             <p><strong>Language:</strong> ${language}</p>
                             <div class="search_addtolist">
-                                <button id="add-btn" class="hover:bg-purple-700 hover:border-purple-700 text-sm border-4 text-white py-1 px-2 rounded add_btn" data-target="#modal${bookID}">Add To Shelf</button>
+                                <button id="add-btn" class="text-sm border-4 text-white py-1 px-2 rounded add_btn" data-target="#modal${bookID}">Add To Shelf</button>
                             </div>
                         </div>
                     </div>

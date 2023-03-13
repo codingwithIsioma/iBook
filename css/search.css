@@ -2,8 +2,8 @@
 :root{
     /* --color-primary: #ff6363;
     --color-primary2: #ff636376; */
-    --color-white: #fff;
-    --color-bg: #f3f4f5;
+    /* --color-white: #fff;
+    --color-bg: #f3f4f5; */
   
     --box-shadow: rgba(0, 0, 0, 0.218);
     --transition: all 300ms ease;
@@ -15,10 +15,15 @@
     margin: 0 auto;
 }
 
+.search-form #searchInput {
+    color: var(--text-color);
+}
+
 .search-form .search-btn {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
 }
+
 
 .search-form .under {
     border-bottom: 2px solid var(--color-primary);

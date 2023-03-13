@@ -2,8 +2,8 @@
 :root{
   /* --color-primary: #ff6363;
   --color-primary2: #ff636376; */
-  --color-white: #fff;
-  --color-bg: #f3f4f5;
+  /* --color-white: #fff;
+  --color-bg: #f3f4f5; */
 
   --box-shadow: rgba(0, 0, 0, 0.218);
   --transition: all 300ms ease;
@@ -12,11 +12,21 @@
 .theme-1 {
   --color-primary: rgb(233, 81, 122);
   --color-primary2: rgba(233, 81, 122, 0.5);
+  --color-white: #fff;
+  --color-bg: #f3f4f5;
+  --color-bg2: #fff;
+  --text-color: #000;
+  --light-black: rgba(0, 0, 0, 0.669);
 }
 
 .theme-2 {
   --color-primary: rgb(103, 83, 155);
   --color-primary2: rgba(103, 83, 155, 0.5);
+  --color-white: #fff;
+  --color-bg: rgb(14, 13, 22);
+  --color-bg2: #030507;
+  --text-color: #fff;
+  --light-black: rgba(255, 255, 255, 0.669);
 }
 
 
@@ -30,21 +40,36 @@
 }
 
 .theme-switcher button {
-  border: none;
+  display: inline-block;
+  background: transparent;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-switcher .light-btn {
+  display: none;
+}
+
+.sunny {
+  color: white;
+}
+
+/* border: none;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  margin: 2px 2px;
-}
+  margin: 2px 2px; */
 
-.theme-switcher button.theme-1 {
+/* .theme-switcher button.theme-1 {
   background-color: rgb(233, 81, 122);
 }
 
 .theme-switcher button.theme-2 {
   background-color: rgb(103, 83, 155);
-}
+} */
 
 
 /* GLOBAL CSS */
@@ -65,8 +90,8 @@ html {
 body {
   font-family: 'Montserrat', san-serif;
   line-height: 1.7;
-  color: #000;
-  /* background: #1f264123; */
+  color: var(--text-color);
+  background: var(--color-bg2);
 }
 
 
@@ -246,7 +271,7 @@ header .main-header {
   font-size: 1.875rem;
   line-height: 2.25rem;
   margin-bottom: 2.4rem;
-  color: #000;
+  color: var(--text-color);
 }
 
 #trending__container {
@@ -278,7 +303,7 @@ header .main-header {
   font-size: 1rem;
   font-weight: 700;
   margin-top: 0.8rem;
-  color: #000;
+  color: var(--text-color);
 }
 
 .trend__info p {
@@ -313,7 +338,7 @@ header .main-header {
 }
 
 .modal__container{
-  background: white;
+  background: var(--color-bg2);
   border-radius: 0.5rem;
   width: 90vw;
   height: 55vh;
@@ -380,7 +405,7 @@ header .main-header {
 
 .modal__right p {
   font-size: 0.85rem;
-  color: rgba(0, 0, 0, 0.669);
+  color: var(--light-black);
   padding: 0 1rem;
   font-weight: light;
   line-height: 1.6;
@@ -389,12 +414,12 @@ header .main-header {
 .modal__right .author {
   margin: 0.3rem 0;
   padding: 0;
-  color: #000;
+  color: var(--light-black);
 }
 
 .modal__right p span {
   margin-right: 0.2rem;
-  color: rgba(0, 0, 0, 0.669);
+  color: var(--light-black);
 }
 
 .modal__right .modal_title {

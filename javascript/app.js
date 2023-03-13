@@ -27,17 +27,23 @@ closeBtn.addEventListener("click", function(){
 
 // Get the theme switcher buttons
 const themeSwitcherButtons = document.querySelectorAll('#theme-button');
+const lightMode = document.querySelector('.light-btn');
+const darkMode = document.querySelector('.dark-btn');
 
 // Add event listeners to the theme switcher buttons
 themeSwitcherButtons.forEach(button => {
   button.addEventListener('click', () => {
     // Toggle the class on the body element
-    if (document.body.classList.contains('theme-1')) {
-      document.body.classList.remove('theme-1');
-      document.body.classList.add('theme-2');
-    } else if (document.body.classList.contains('theme-2')){
+    if (document.body.classList.contains('theme-2')) {
       document.body.classList.remove('theme-2');
       document.body.classList.add('theme-1');
+      darkMode.style.display = 'inline-block';
+      lightMode.style.display = 'none';
+    } else if (document.body.classList.contains('theme-1')){
+      document.body.classList.remove('theme-1');
+      document.body.classList.add('theme-2');
+      darkMode.style.display = 'none';
+      lightMode.style.display = 'inline-block';
     }
     console.log('Hey');
     
