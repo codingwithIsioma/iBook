@@ -45,7 +45,6 @@ themeSwitcherButtons.forEach(button => {
       darkMode.style.display = 'none';
       lightMode.style.display = 'inline-block';
     }
-    console.log('Hey');
     
     // Save the user's preference
     localStorage.setItem('theme', document.body.classList.contains('theme-1') ? 'theme-1' : 'theme-2');
@@ -64,3 +63,17 @@ if (savedTheme) {
 }
 
 
+const articles = document.querySelectorAll('[data-target]');
+const closeBtns = document.querySelectorAll('.close-btn');
+
+articles.forEach((item) => {
+  item.addEventListener('click', ()=> {
+    document.querySelector(item.dataset.target).classList.add('open-modal')
+  })
+})
+
+closeBtns.forEach((btn)=> {
+  btn.addEventListener('click', ()=> {
+    document.querySelector(btn.dataset.target).classList.remove('open-modal')
+  })
+})

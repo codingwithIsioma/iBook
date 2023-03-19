@@ -1,0 +1,276 @@
+.store-header {
+    margin-top: 8rem;
+}
+
+.store-heading {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.store-message {
+    font-size: 0.9rem;
+    color: var(--light-black);
+}
+
+.store-sections {
+    position: relative;
+}
+
+.store-sections .store-specials {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.stores {
+    /* width: 20%; */
+    transition: var(--transition);
+    cursor: pointer;
+}
+  
+.stores:focus {
+    transform: scale(1.05);
+}
+
+.store__image img{
+    border-radius: 0.5rem;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 10px #0000007e;
+}
+
+.store__info {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    text-align: left;
+    margin: 0.5rem auto;
+    align-items: center;
+}
+  
+.store__info h4 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.download-btn {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+
+/*==== SPECIALS MODAL ====*/
+#modal {
+  background-color: rgba(255, 0, 0, 0.449);
+}
+.store_modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-overlay);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+
+/* Open/Close Modal */
+.open-modal{
+  visibility: visible;
+  z-index: 10;
+}
+
+.store_modal-container{
+  background: var(--color-bg2);
+  border-radius: 0.5rem;
+  width: 90vw;
+  height: 55vh;
+  max-width: 700px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+/*=== MODAL CONTENT ===*/
+.store_modal-content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 0.1rem;
+  padding: 0 1rem;
+}
+
+.store_modal-left img{
+  width: 90%;
+}
+
+.store_modal-right {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.store_modal-right .btn {
+  margin: 0.3rem 0 1rem;
+}
+.store_modal-right .btn:hover {
+  transform: none;
+}
+
+.store_modal-right .hero-btn {
+  padding: 1rem 5rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  font-size: 0.8rem;
+}
+
+.store_modal-right .red-btn {
+  font-size: 0.8rem;
+  padding: 1rem 2.5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.store_modal-right p {
+  font-size: 0.85rem;
+  color: var(--light-black);
+  padding: 0 1rem;
+  font-weight: light;
+  line-height: 1.6;
+}
+
+.store_modal-right .author {
+  margin: 0.3rem 0;
+  padding: 0;
+  color: var(--light-black);
+}
+
+.store_modal-right p span {
+  margin-right: 0.2rem;
+  color: var(--light-black);
+}
+
+.store_modal-right .store_modal-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.store_modal-right .more {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  position: absolute;
+  right: 1.7rem;
+  cursor: pointer;
+}
+
+.store_modal-right .more span {
+  font-size: 1.3rem;
+}
+
+/*========== MEDIA QUERIES (TABLETS) ===========*/
+@media screen and (max-width: 1023px) {
+    /* SPECIALS MODAL */
+    .store_modal-container {
+        height: 40vh;
+    }
+    .store_modal-left img {
+        width: 90%;
+    }
+    .store_modal-right {
+        margin-top: 0;
+    }
+    .store_modal-right .store_modal-title {
+        font-size: 1.4rem;
+    }
+}
+
+/*========== MEDIA QUERIES (PHONES) ===========*/
+@media screen and (max-width: 600px) {
+    .store-header {
+        margin-top: 6.5rem;
+    }
+    .store-heading {
+        font-size: 1.8rem;
+    }
+    .store-message {
+        font-size: 0.6rem;
+    }
+    .store-sections {
+        padding: 2rem 0;
+    }
+    .store-sections .store-specials {
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
+    }
+    .store__image img{
+        width: 170px;
+        height: 250px;
+        object-fit: fill;
+    }
+    /* MODAL OVERLAY */
+    .store_modal-container {
+        height: 40vh;
+        overflow: hidden;
+        overflow: scroll;
+    }
+    .store_modal-content {
+        grid-template-columns: 1fr;
+    }
+    .store_modal-left {
+        width: 45%;
+        margin: 1rem auto;
+    }
+    .store_modal-right {
+        text-align: center;
+    }
+    .store_modal-right .btn {
+        margin: 0 0 0.5rem;
+    }
+    .store_modal-right .hero-btn {
+        padding: 0.5rem 2.5rem;
+        font-size: 0.8rem;
+    }
+    .store_modal-right .red-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.25rem;
+    }
+    .store_modal-right h3 {
+        font-size: 1.1rem;
+    }
+    .store_modal-right p {
+        font-size: 0.8rem;
+    }
+    .store_modal-right .author {
+        margin: 0.2rem 0;
+    }
+    .store_modal-right .modal_title {
+        font-size: 1.1rem;
+    }  
+    .store_modal-right .more {
+        margin: 0.5rem 0;
+    }
+}

@@ -6,7 +6,7 @@
     --color-bg: #f3f4f5; */
 
   
-    --box-shadow: rgba(0, 0, 0, 0.218);
+    /* --box-shadow: rgba(0, 0, 0, 0.218); */
     --transition: all 300ms ease;
 }
 
@@ -19,7 +19,7 @@
 
 .browse-header-desc {
     font-size: 0.9rem;
-    color:var(--light-black);
+    color: var(--light-black);
 }
 
 .browse-content-container {
@@ -29,7 +29,7 @@
     place-items: center;
     gap: 1rem;
     margin: 50px auto;
-    box-shadow: 2px 2px 8px var(--box-shadow);
+    box-shadow: 2px 2px 8px var(--box-shadow2);
     padding: 20px;
 }
 

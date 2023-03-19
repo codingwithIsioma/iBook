@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event Listener: Add book to shelf
 const addingBookFunction = (data)=> {
-    console.log("Howdy")
+    // console.log("Howdy")
     const addBtn = document.querySelectorAll("#add-btn");
     addBtn.forEach((btn)=> {
         btn.addEventListener('click', ()=> {

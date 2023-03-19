@@ -17,6 +17,8 @@
   --color-bg2: #fff;
   --text-color: #000;
   --light-black: rgba(0, 0, 0, 0.669);
+  --box-shadow2: rgba(0, 0, 0, 0.218);
+  --modal-overlay: rgba(0, 0, 0, 0.45);
 }
 
 .theme-2 {
@@ -27,6 +29,8 @@
   --color-bg2: #030507;
   --text-color: #fff;
   --light-black: rgba(255, 255, 255, 0.669);
+  --box-shadow2: rgba(255, 255, 255, 0.218);
+  --modal-overlay: rgba(255, 255, 255, 0.118);
 }
 
 
@@ -281,7 +285,7 @@ header .main-header {
 }
 
 .trends {
-  width: 20%;
+  /* width: 20%; */
   transition: var(--transition);
   cursor: pointer;
 }
@@ -292,8 +296,8 @@ header .main-header {
 
 .trend__image img{
   /* width: 700px; */
-  border-radius: 1rem;
-  width: 230px;
+  border-radius: 0.5rem;
+  width: 200px;
   height: 300px;
   object-fit: cover;
   box-shadow: 0 0 10px #0000007e;
@@ -323,7 +327,7 @@ header .main-header {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--modal-overlay);
   display: grid;
   place-items: center;
   transition: var(--transition);
@@ -683,5 +687,11 @@ header .main-header {
   /* ALERT */
   #alert-notification {
     margin-left: 28%;
+  }
+  #alert-message {
+    font-size: 0.7rem;
+  }
+  .thumbs-svg {
+    font-size: 0.5rem;
   }
 }
