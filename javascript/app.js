@@ -25,6 +25,21 @@ closeBtn.addEventListener("click", function(){
   menuBtn.style.display = "inline-block"
 })
 
+const articles = document.querySelectorAll('[data-target]');
+const closeBtns = document.querySelectorAll('.close-btn');
+
+articles.forEach((item) => {
+  item.addEventListener('click', ()=> {
+    document.querySelector(item.dataset.target).classList.add('open-modal')
+  })
+})
+
+closeBtns.forEach((btn)=> {
+  btn.addEventListener('click', ()=> {
+    document.querySelector(btn.dataset.target).classList.remove('open-modal')
+  })
+})
+
 // Get the theme switcher buttons
 const themeSwitcherButtons = document.querySelectorAll('#theme-button');
 const lightMode = document.querySelector('.light-btn');
@@ -57,23 +72,11 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
   // Apply the saved theme
   document.body.classList.add(savedTheme);
+  if(savedTheme === 'theme-2') {
+    darkMode.style.display = 'none';
+    lightMode.style.display = 'inline-block'
+  }
 } else {
   // Apply the default theme
   document.body.classList.add('theme-1');
 }
-
-
-const articles = document.querySelectorAll('[data-target]');
-const closeBtns = document.querySelectorAll('.close-btn');
-
-articles.forEach((item) => {
-  item.addEventListener('click', ()=> {
-    document.querySelector(item.dataset.target).classList.add('open-modal')
-  })
-})
-
-closeBtns.forEach((btn)=> {
-  btn.addEventListener('click', ()=> {
-    document.querySelector(btn.dataset.target).classList.remove('open-modal')
-  })
-})

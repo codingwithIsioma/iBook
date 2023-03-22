@@ -384,6 +384,7 @@ header .main-header {
 .modal__right {
   text-align: left;
   margin-top: 0.5rem;
+  width: 100%;
 }
 
 .modal__right .btn {
@@ -565,6 +566,7 @@ header .main-header {
   }
   .modal__left img {
     width: 95%;
+    object-fit: fill;
   }
   .modal__right {
     margin-top: 0;

@@ -1,69 +1,85 @@
+:root{
+  --box-shadow: rgba(0, 0, 0, 0.218);
+  --transition: all 300ms ease;
+}
+
 .store-header {
-    margin-top: 8rem;
+  margin-top: 8rem;
 }
 
 .store-heading {
-    font-size: 2rem;
-    font-weight: 600;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .store-message {
-    font-size: 0.9rem;
-    color: var(--light-black);
+  font-size: 0.9rem;
+  color: var(--light-black);
 }
 
 .store-sections {
-    position: relative;
+  background: var(--color-bg2);
+  position: relative;
 }
 
 .store-sections .store-specials {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-color);
 }
 
 .stores {
-    /* width: 20%; */
-    transition: var(--transition);
-    cursor: pointer;
+  /* width: 20%; */
+  transition: var(--transition);
+  cursor: pointer;
 }
   
 .stores:focus {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .store__image img{
-    border-radius: 0.5rem;
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    box-shadow: 0 0 10px #0000007e;
+  border-radius: 0.5rem;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 10px #0000007e;
 }
 
 .store__info {
-    display: grid;
-    grid-template-columns: 90% 10%;
-    text-align: left;
-    margin: 0.5rem auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  text-align: left;
+  margin: 0.5rem auto;
+  align-items: center;
 }
   
 .store__info h4 {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.download-details {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.download-count {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--light-black);
+  margin-right: 5px;
 }
 
 .download-btn {
-    font-size: 0.8rem;
-    color: var(--color-primary);
+  font-size: 0.8rem;
+  color: var(--color-primary);
 }
 
 /*==== SPECIALS MODAL ====*/
-#modal {
-  background-color: rgba(255, 0, 0, 0.449);
-}
 .store_modal-overlay {
   position: absolute;
   top: 0;
@@ -76,13 +92,13 @@
   place-items: center;
   transition: var(--transition);
   visibility: hidden;
-  z-index: -10;
+  z-index: -1;
 }
 
 /* Open/Close Modal */
 .open-modal{
   visibility: visible;
-  z-index: 10;
+  z-index: 2;
 }
 
 .store_modal-container{
